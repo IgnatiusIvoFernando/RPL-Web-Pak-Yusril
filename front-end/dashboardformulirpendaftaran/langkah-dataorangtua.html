@@ -1,0 +1,45 @@
+<div class="form-wrapper">
+    <div class="content-card">
+        <h3>
+            <svg class="icon-user" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Data Orang Tua
+        </h3>
+        <p class="form-instruction">Informasi orangtua/wali</p>
+
+        <div class="form-row">
+            <div class="form-group-item">
+                <label class="group-label">Data Ayah</label>
+                <button class="click-input" id="openAyah">
+                    <i>☰</i> Klik untuk mengisi data ayah
+                </button>
+            </div>
+            <div class="form-group-item">
+                <label class="group-label">Data Ibu</label>
+                <button class="click-input" id="openIbu">
+                    <i>☰</i> Klik untuk mengisi data ibu
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-navigation">
+            <button onclick="location.href='navigator.php?menu=dataakademik';" class="btn-prev">
+                <i class="icon-chevron-left">❮</i> Sebelumnya
+            </button>
+            <div class="btn-group-right">
+                <button type="button" class="btn-form btn-form-secondary">
+                    <i class="far fa-file-alt"></i> Simpan Draft
+                </button>
+                <button type="submit" onclick="location.href='navigator.php?menu=dokumen';" class="btn-form btn-form-primary">
+                    Selanjutnya
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script_modal.js"></script>

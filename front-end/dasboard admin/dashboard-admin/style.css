@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #3C4C5A;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background-color: #64707B;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  color: #F1C40F;
+}
+
+/* Dropdown */
+.dropdown {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  margin-left: 20px;
+  margin-top: 5px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submenu.show {
+  display: flex;
+}
+
+.submenu li {
+  font-size: 14px;
+  color: #e6e6e6;
+}
+
+.submenu li:hover {
+  color: #F1C40F;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+  background-color: #2E3A47;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+/* Statistik */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #3E5060;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card h2 {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+/* Content Row */
+.content-row {
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  flex: 1;
+  background-color: #3E5060;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.table-section {
+  flex: 2;
+  background-color: #3E5060;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.table-header a {
+  color: #F1C40F;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.belum {
+  color: #E74C3C;
+  font-weight: bold;
+}

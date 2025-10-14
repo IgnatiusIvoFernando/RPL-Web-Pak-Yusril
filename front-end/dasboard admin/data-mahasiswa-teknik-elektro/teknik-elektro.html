@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teknik Elektro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <i class="fa fa-arrow-left back-btn"></i>
+        <h2>Teknik Elektro</h2>
+      </div>
+    </header>
+
+    <!-- Search section -->
+    <section class="search-section">
+      <div class="search-bar">
+        <input type="text" placeholder="Cari data mahasiswa...">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+      <select class="filter">
+        <option>semua</option>
+        <option>terverifikasi</option>
+        <option>belum terverifikasi</option>
+      </select>
+    </section>
+
+    <!-- Table Section -->
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Prodi</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Baris utama -->
+          <tr class="expandable">
+            <td>1</td>
+            <td>Adityo D.s</td>
+            <td>D3 - TIF</td>
+            <td class="status belum">Belum terverifikasi <i class="fa fa-chevron-down toggle"></i></td>
+          </tr>
+          <!-- Detail dokumen -->
+          <tr class="detail">
+            <td></td>
+            <td>Dokumen</td>
+            <td colspan="2"></td>
+          </tr>
+          <tr class="detail">
+            <td></td>
+            <td>Ijazah / SKL</td>
+            <td><i class="fa fa-eye"></i></td>
+            <td></td>
+          </tr>
+          <tr class="detail">
+            <td></td>
+            <td>Kartu Keluarga</td>
+            <td><i class="fa fa-eye"></i></td>
+            <td></td>
+          </tr>
+          <tr class="detail">
+            <td></td>
+            <td>Akta Kelahiran</td>
+            <td><i class="fa fa-eye"></i></td>
+            <td></td>
+          </tr>
+          <tr class="detail">
+            <td></td>
+            <td>Pas Foto 3x4</td>
+            <td><i class="fa fa-eye"></i></td>
+            <td></td>
+          </tr>
+
+          <!-- Baris berikutnya -->
+          <tr class="expandable">
+            <td>2</td>
+            <td>Muhammad Athaya Febryanda</td>
+            <td>D3 - TIF</td>
+            <td class="status verified">Terverifikasi <i class="fa fa-chevron-down toggle"></i></td>
+          </tr>
+
+          <tr class="expandable">
+            <td>3</td>
+            <td>Rani Mumtazah Hanun</td>
+            <td>D3 - TIF</td>
+            <td class="status belum">Belum terverifikasi <i class="fa fa-chevron-down toggle"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    // Toggle expand/collapse dokumen
+    const toggles = document.querySelectorAll(".toggle");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const row = toggle.closest("tr");
+        const nextRows = [];
+        let next = row.nextElementSibling;
+
+        // Kumpulkan baris detail sampai baris expandable berikutnya
+        while (next && !next.classList.contains("expandable")) {
+          nextRows.push(next);
+          next = next.nextElementSibling;
+        }
+
+        // Toggle tampilan baris detail
+        nextRows.forEach((r) => r.classList.toggle("show"));
+        toggle.classList.toggle("rotate");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+/* Warna berdasarkan desain */
+:root {
+    --color-dark-blue: #365368; /* Sidebar Kiri */
+    --color-white: #ffffff;
+    --color-gray-text: #6c757d;
+    --color-input-border: #ced4da;
+    --color-button-primary: #365368; /* Warna tombol sesuai sidebar */
+}
+
+/* Reset dan Pengaturan Font Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif; /* Ganti dengan font yang sesuai jika diketahui (misalnya Poppins, Inter) */
+    background-color: var(--color-white);
+    color: #212529;
+}
+
+/* ---------------------------------- */
+/* Struktur Split Screen (Login Container) */
+/* ---------------------------------- */
+.login-container {
+    display: flex;
+    min-height: 100vh; /* Pastikan container mengisi seluruh tinggi layar */
+}
+
+/* ---------------------------------- */
+/* Bagian Kiri: Sidebar Informasi */
+/* ---------------------------------- */
+.sidebar {
+    width: 50%;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Posisikan konten di tengah vertikal */
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 2.5em; /* Sesuaikan ukuran font */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Card Statistik */
+.stats-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.stat-card {
+    background-color: var(--color-white);
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--color-dark-blue);
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* ---------------------------------- */
+/* Bagian Kanan: Form Login Area */
+/* ---------------------------------- */
+.login-form-area {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Shadow lebih menonjol seperti desain */
+    width: 100%;
+    max-width: 400px; /* Batasi lebar form */
+}
+
+.login-card h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.instruction {
+    color: var(--color-gray-text);
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Tombol Login */
+.btn-login {
+    width: 100%;
+    background-color: var(--color-button-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #293640; /* Sedikit lebih gelap saat di-hover */
+}
+
+/* Link Lupa Password */
+.forgot-password {
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+    color: var(--color-gray-text);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Teks Daftar */
+.register-text {
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+.register-text a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/* Media Query untuk Responsif */
+/* ---------------------------------- */
+
+@media (max-width: 992px) {
+    /* Pada layar yang lebih kecil dari 992px, bagi rata 50%/50% */
+    .sidebar {
+        width: 50%;
+        padding: 40px; /* Kurangi padding di samping */
+    }
+
+    .login-form-area {
+        width: 50%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2em; /* Kecilkan sedikit font judul */
+    }
+
+    .stat-number {
+        font-size: 1.5em; /* Kecilkan angka statistik */
+    }
+
+    .login-card {
+        padding: 30px; /* Kurangi padding card login */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Pada layar yang lebih kecil dari 768px (mayoritas tablet/ponsel), tumpuk kolom */
+    .login-container {
+        flex-direction: column; /* Ubah tata letak dari baris ke kolom */
+    }
+
+    .sidebar, .login-form-area {
+        width: 100%; /* Setiap bagian mengambil lebar penuh */
+        min-height: auto; /* Hilangkan min-height */
+    }
+
+    /* Penataan Ulang Sidebar (Sekarang di atas) */
+    .sidebar {
+        order: 1; /* Pastikan sidebar muncul di atas */
+        padding: 50px 30px;
+        text-align: center; /* Ratakan teks di tengah */
+    }
+
+    .title {
+        font-size: 2.2em;
+    }
+
+    .subtitle {
+        margin-bottom: 30px;
+    }
+
+    .stats-group {
+        justify-content: center;
+        flex-wrap: wrap; /* Izinkan kartu statistik melipat jika perlu */
+        gap: 10px;
+    }
+
+    .stat-card {
+        flex: 1 1 30%; /* Berikan sedikit kelonggaran agar bisa 3 kartu dalam 1 baris */
+        padding: 15px;
+    }
+
+    /* Penataan Ulang Form Login (Sekarang di bawah) */
+    .login-form-area {
+        order: 2; /* Form login muncul di bawah */
+        padding: 50px 30px;
+    }
+
+    .login-card {
+        max-width: 100%; /* Ambil lebar penuh di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Penyesuaian ekstra untuk ponsel yang sangat kecil */
+    .stats-group {
+        flex-direction: column; /* Tumpuk kartu statistik menjadi satu kolom */
+    }
+
+    .stat-card {
+        flex: none; /* Nonaktifkan fleksibilitas */
+        width: 100%;
+    }
+}
+/* Warna yang digunakan pada desain */
+:root {
+    --color-dark-blue: #374754; /* Warna latar belakang header */
+    --color-white: #ffffff;
+}
+
+/* Reset Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4; /* Warna latar belakang umum halaman */
+}
+
+/* ---------------------------------- */
+/* Gaya Page Header */
+/* ---------------------------------- */
+.page-header {
+    background-color: var(--color-dark-blue);
+    width: 100%;
+    /* Atur tinggi header untuk memberikan ruang yang terlihat pada gambar */
+    height: 100px; 
+    display: flex;
+    align-items: center; /* Pusatkan konten vertikal */
+}
+
+.header-content {
+    /* Padding di sini menentukan jarak dari tepi kiri */
+    padding: 0 40px; 
+    width: 100%;
+}
+
+.back-link {
+    color: var(--color-white);
+    font-size: 1.2em; /* Ukuran font yang agak besar */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------------------------------- */
+/* Responsif (Opsional) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    .page-header {
+        height: 70px; /* Sedikit lebih pendek di ponsel */
+    }
+
+    .header-content {
+        padding: 0 20px; /* Kurangi padding horizontal di ponsel */
+    }
+
+    .back-link {
+        font-size: 1.1em;
+    }
+}
+/* ---------------------------------- */
+/* Gaya Form Pendaftaran */
+/* ---------------------------------- */
+
+/* Kontainer untuk menengahkan form di halaman */
+.register-container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Jaga agar register-container mengisi ruang di bawah header */
+    min-height: calc(100vh - 100px); /* 100px adalah tinggi header yang sudah kita tentukan */
+    background-color: #f8f9fa; /* Latar belakang halaman yang terang */
+}
+
+/* Card Form Pendaftaran */
+.register-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 600px;
+    height: 650px;
+}
+
+.form-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+/* Grup Input Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #374754; /* Border warna biru saat fokus */
+    outline: none;
+}
+
+/* Tombol Daftar */
+.btn-register {
+    width: 100%;
+    background-color: #374754; /* Warna biru gelap yang sama dengan header/navbar */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #293640; 
+}
+/* ---------------------------------- */
+/* Gaya Form Reset Password */
+/* ---------------------------------- */
+
+/* Kontainer untuk menengahkan form di halaman */
+.reset-container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Pastikan mengisi ruang vertikal */
+    min-height: calc(100vh - 100px);
+    background-color: #f8f9fa; /* Latar belakang halaman yang terang */
+}
+
+/* Card Form Reset */
+.reset-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 400px; 
+    text-align: center; 
+}
+
+.reset-card .form-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.reset-card .form-subtitle {
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+/* Grup Input Form - Dibuat rata kiri */
+.reset-card .form-group {
+    margin-bottom: 30px;
+    text-align: left; /* Teks dan input rata kiri */
+}
+
+.reset-card .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.reset-card .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Tombol Selanjutnya */
+.btn-next {
+    width: 100%;
+    background-color: #374754; /* Warna biru gelap */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-next:hover {
+    background-color: #293640; 
+}
+
+/* ---------------------------------- */
+/* Media Query (Responsif) */
+/* ---------------------------------- */
+@media (max-width: 480px) {
+    .reset-card {
+        padding: 30px;
+    }
+}
+
+/* Menggunakan kelas card yang sudah ada */
+.verification-container {
+    /* Gunakan gaya yang sama dengan .reset-container */
+    min-height: calc(70vh - 100px); 
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.verification-card {
+    /* Gunakan gaya yang sama dengan .reset-card */
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 600px; /* Lebar card sama */
+    text-align: center;
+}
+
+/* Penyesuaian untuk subjudul yang lebih panjang */
+.form-subtitle.small-text {
+    font-size: 0.85em; /* Sedikit lebih kecil agar teks panjang terlihat rapi */
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+
+/* Jarak input khusus untuk form verifikasi */
+.verification-input {
+    margin-bottom: 30px; /* Berikan jarak yang cukup sebelum tombol */
+    text-align: left;
+}
+
+/* Anda dapat menambahkan ini ke file CSS utama Anda (misalnya, styles.css) */
+
+/* Menggunakan gaya yang sama dengan form sebelumnya */
+.new-password-container {
+    /* Gunakan gaya yang sama dengan .reset-container */
+    min-height: calc(70vh - 100px); 
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.new-password-card {
+    /* Gunakan gaya yang sama dengan .reset-card */
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Penyesuaian subjudul agar terlihat lebih ringkas */
+.form-subtitle.small-text {
+    font-size: 0.85em; 
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+
+/* Jarak standar untuk input form */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Tombol Selesai menggunakan gaya tombol selanjutnya/login yang sudah ada */
+.btn-next {
+    /* Gunakan gaya yang sama dengan .btn-next atau .btn-login */
+    width: 100%;
+    background-color: #374754; 
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px; /* Jarak dari input terakhir */
+}

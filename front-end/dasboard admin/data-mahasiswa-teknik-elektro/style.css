@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #3C4C5A;
+  color: white;
+}
+
+.page-container {
+  background-color: #2E3A47;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* Header */
+.header {
+  background-color: #2E3A47;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Search section */
+.search-section {
+  background-color: #3C4C5A;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-bar {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.filter {
+  width: 100px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Table */
+.table-section {
+  background-color: #3C4C5A;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #1E2C3A;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px;
+  color: #fff;
+  font-weight: 600;
+}
+
+tbody tr {
+  background-color: #C8C8C8;
+  color: #000;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #999;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status.verified {
+  color: #27AE60;
+  font-weight: 600;
+}
+
+.status.belum {
+  color: #E74C3C;
+  font-weight: 600;
+}
+
+.toggle {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.toggle.rotate {
+  transform: rotate(180deg);
+}
+
+/* Baris detail dokumen */
+.detail {
+  display: none;
+  background-color: #DADADA;
+}
+
+.detail.show {
+  display: table-row;
+}
+
+.detail td {
+  color: #000;
+  font-size: 14px;
+}
+
+.detail i {
+  cursor: pointer;
+  font-size: 16px;
+}

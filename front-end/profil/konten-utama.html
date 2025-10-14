@@ -1,0 +1,126 @@
+<main class="main">
+    <div class="header">
+      <h1>Profil Saya</h1>
+      <div class="status-badge">Status: menunggu Verifikasi</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('personal')">
+        <div class="icon">👤</div>
+        <div>Data Pribadi</div>
+      </div>
+      <div class="tab" onclick="showTab('academic')">
+        <div class="icon">🎓</div>
+        <div>Informasi Akademik</div>
+      </div>
+      <div class="tab" onclick="showTab('parent')">
+        <div class="icon">👪</div>
+        <div>Data Orang Tua</div>
+      </div>
+      <div class="tab" onclick="showTab('document')">
+        <div class="icon">📄</div>
+        <div>Dokumen</div>
+      </div>
+    </div>
+
+    <!-- Data Pribadi -->
+    <div class="card tab-content" id="tab-personal">
+      <h3>Informasi Pribadi</h3>
+      <div class="info-grid">
+        <div class="info-item"><span>Nama Lengkap</span><strong>Aldi Mahendra</strong></div>
+        <div class="info-item"><span>Agama</span><strong>Islam</strong></div>
+        <div class="info-item"><span>Email</span><strong>mahasiswa@example.com</strong></div>
+        <div class="info-item"><span>Kota</span><strong>Jakarta Pusat</strong></div>
+        <div class="info-item"><span>Tempat, Tanggal Lahir</span><strong>Jakarta, 15/5/2004</strong></div>
+        <div class="info-item"><span>Golongan Darah</span><strong>A</strong></div>
+        <div class="info-item"><span>Alamat</span><strong>Jl. Sudirman No.123, Jakarta Pusat</strong></div>
+        <div class="info-item"><span>Kode Pos</span><strong>10310</strong></div>
+        <div class="info-item"><span>Jenis Kelamin</span><strong>Laki-Laki</strong></div>
+        <div class="info-item"><span>No. HP</span><strong>081234567890</strong></div>
+        <div class="info-item"><span>Provinsi</span><strong>DKI Jakarta</strong></div>
+      </div>
+    </div>
+
+    <!-- Informasi Akademik -->
+    <div class="card tab-content" id="tab-academic" style="display:none;">
+      <h3>Informasi Akademik</h3>
+      <div class="info-grid">
+        <div class="info-item"><span>Fakultas</span><strong>Fakultas Teknik</strong></div>
+        <div class="info-item"><span>Jalur Masuk</span><strong>SNBT</strong></div>
+        <div class="info-item"><span>Asal Sekolah</span><strong>SMA Negeri 1 Jakarta</strong></div>
+        <div class="info-item"><span>Jurusan</span><strong>Teknik Informatika</strong></div>
+        <div class="info-item"><span>Tahun Angkatan</span><strong>2024/2025</strong></div>
+        <div class="info-item"><span>Tahun Lulus</span><strong>2024</strong></div>
+        <div class="info-item"><span>Program Studi</span><strong>Sistem Informasi</strong></div>
+        <div class="info-item"><span>Kelas/Shift</span><strong>Pagi</strong></div>
+      </div>
+    </div>
+
+    <!-- Data Orang Tua -->
+    <div class="card tab-content" id="tab-parent" style="display:none;">
+      <h3>Informasi Orang Tua/Wali</h3>
+      <div class="parent-grid">
+        <div class="parent-box">
+          <h4>Data Ayah</h4>
+          <div class="info-item"><span>Nama Lengkap</span><strong>Samsudin</strong></div>
+          <div class="info-item"><span>No. HP</span><strong>081234567890987</strong></div>
+          <div class="info-item"><span>Pekerjaan</span><strong>PNS</strong></div>
+          <div class="info-item"><span>Penghasilan</span><strong>Rp 5.000.000 - Rp 6.000.000</strong></div>
+        </div>
+        <div class="parent-box">
+          <h4>Data Ibu</h4>
+          <div class="info-item"><span>Nama Lengkap</span><strong>Dinda</strong></div>
+          <div class="info-item"><span>No. HP</span><strong>081234567890987</strong></div>
+          <div class="info-item"><span>Pekerjaan</span><strong>Ibu Rumah Tangga</strong></div>
+          <div class="info-item"><span>Penghasilan</span><strong>&lt; Rp 1.000.000</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dokumen -->
+    <div class="card tab-content" id="tab-document" style="display:none;">
+      <h3>Dokumen Pendukung</h3>
+      <div class="doc-list">
+        <div class="doc-item">
+          <div class="doc-info">
+            <strong>Ijazah/SKL</strong><br>
+            <small>ijazah.pdf</small>
+          </div>
+          <div class="doc-status approved">Disetujui</div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-info">
+            <strong>Kartu Keluarga</strong><br>
+            <small>kk.pdf</small>
+          </div>
+          <div class="doc-status approved">Disetujui</div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-info">
+            <strong>Akta Kelahiran</strong><br>
+            <small>akta.pdf</small>
+          </div>
+          <div class="doc-status approved">Disetujui</div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-info">
+            <strong>Pas Foto 3x4</strong><br>
+            <small>pasfoto.jpg</small>
+          </div>
+          <div class="doc-status rejected">Ditolak</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function showTab(tab) {
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+
+      document.querySelector(`[onclick="showTab('${tab}')"]`).classList.add('active');
+      document.getElementById(`tab-${tab}`).style.display = 'block';
+    }
+  </script>

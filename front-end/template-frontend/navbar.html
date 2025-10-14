@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="../../styles2.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar-nav">
+            <div class="profile-info">
+                <div class="profile-avatar" style="background: url('avatar.jpg') center/cover; background-color: #5b8ba8;"></div> 
+                <div class="profile-details">
+                    <p class="profile-name">Mas Febri Adithya</p>
+                    <p class="profile-nsin">NSIN: 18946183772</p>
+                </div>
+            </div>
+            
+            <nav class="main-menu">
+                <a href="#" class="nav-item" data-page="dashboard">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="../dashboardformulirpendaftaran/navigator.php?menu=datapribadi" class="nav-item active" data-page="formulir">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Formulir Pendaftaran
+                </a>
+                <a href="#" class="nav-item" data-page="pengumuman">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    Pengumuman
+                </a>
+                <a href="../profil/navigator.php?menu=utama" class="nav-item" data-page="profil">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Profil
+                </a>
+            </nav>
+        </aside>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            function setActiveNav(clickedItem) {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                clickedItem.classList.add('active');
+                
+                const page = clickedItem.getAttribute('data-page');
+                localStorage.setItem('activePage', page);
+            }
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        setActiveNav(this);
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    setActiveNav(this);
+                    
+                    const page = this.getAttribute('data-page');
+                    console.log('Navigating to:', page);
+
+                });
+            });
+            
+            const savedActivePage = localStorage.getItem('activePage');
+            if (savedActivePage) {
+                navItems.forEach(item => {
+                    if (item.getAttribute('data-page') === savedActivePage) {
+                        item.classList.remove('active');
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

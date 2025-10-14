@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><i class="fa fa-home"></i> Beranda</li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <div class="dropdown-toggle">
+            <i class="fa fa-users"></i>Data Mahasiswa
+            <i class="fa fa-chevron-down arrow"></i>
+          </div>
+          <ul class="submenu">
+            <li>Teknik Elektro</li>
+            <li>Teknik Mesin</li>
+            <li>Teknik Sipil</li>
+            <li>Teknik Arsitektur</li>
+          </ul>
+        </li>
+
+        <li><i class="fa fa-bullhorn"></i> Pengumuman</li>
+        <li><i class="fa fa-gear"></i> Pengaturan</li>
+        <li><i class="fa fa-sign-out-alt"></i> Keluar</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header>
+        <h1>Dashboard Admin</h1>
+      </header>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Cari data mahasiswa...">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+
+      <!-- Statistik -->
+      <div class="stats">
+        <div class="card">
+          <i class="fa fa-mars"></i>
+          <p>Total Mahasiswa Laki-laki</p>
+          <h2>0</h2>
+        </div>
+        <div class="card">
+          <i class="fa fa-venus"></i>
+          <p>Total Mahasiswa Perempuan</p>
+          <h2>0</h2>
+        </div>
+        <div class="card">
+          <i class="fa fa-users"></i>
+          <p>Total Mahasiswa</p>
+          <h2>0</h2>
+        </div>
+        <div class="card">
+          <i class="fa fa-check-circle"></i>
+          <p>Terverifikasi</p>
+          <h2>0</h2>
+        </div>
+      </div>
+
+      <!-- Diagram dan tabel -->
+      <div class="content-row">
+        <div class="chart">
+          <canvas id="chartPie"></canvas>
+        </div>
+
+        <div class="table-section">
+          <div class="table-header">
+            <h3>Data Mahasiswa</h3>
+            <a href="#">View all</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>Prodi</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anonymous</td>
+                <td>Teknik Elektro</td>
+                <td>D3 Teknik Informatika</td>
+                <td class="belum">Belum terverifikasi</td>
+              </tr>
+              <tr>
+                <td>Anonymous</td>
+                <td>Teknik Elektro</td>
+                <td>D3 Teknik Informatika</td>
+                <td class="belum">Belum terverifikasi</td>
+              </tr>
+              <tr>
+                <td>Anonymous</td>
+                <td>Teknik Elektro</td>
+                <td>D3 Teknik Informatika</td>
+                <td class="belum">Belum terverifikasi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Chart.js
+    const ctx = document.getElementById('chartPie');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Teknik Elektro', 'Akuntansi', 'Teknik Mesin', 'Teknik Sipil', 'Teknik Arsitektur', 'Teknologi Pertanian'],
+        datasets: [{
+          data: [20, 10, 15, 12, 8, 6],
+          backgroundColor: ['#E74C3C', '#F1C40F', '#5DADE2', '#2ECC71', '#9B59B6', '#F39C12']
+        }]
+      }
+    });
+
+    // Dropdown toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const submenu = document.querySelector('.submenu');
+    const arrow = document.querySelector('.arrow');
+
+    dropdownToggle.addEventListener('click', () => {
+      submenu.classList.toggle('show');
+      arrow.classList.toggle('rotate');
+    });
+  </script>
+</body>
+</html>

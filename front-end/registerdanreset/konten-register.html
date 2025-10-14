@@ -1,0 +1,30 @@
+<div class="register-container">
+    <div class="register-card">
+        <h2 class="form-title">Buat Akun Baru</h2>
+        <p class="form-subtitle">Silahkan melengkapi form di bawah untuk membuat akun</p>
+
+        <form action="../index.php">
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim" placeholder="Masukkan NIM Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="mahasiswa@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Konfirmasi password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Ulangi password" required>
+            </div>
+            
+            <button type="submit" class="btn-register">Daftar sekarang</button>
+        </form>
+    </div>
+</div>

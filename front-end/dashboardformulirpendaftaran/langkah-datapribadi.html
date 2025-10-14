@@ -1,0 +1,116 @@
+<div class="form-wrapper">
+    <div class="content-card">
+    <h3><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; color: var(--color-primary);">
+<path d="M11 8.77778C11.5107 8.77778 12.0164 8.67719 12.4882 8.48175C12.96 8.28632 13.3887 7.99987 13.7499 7.63875C14.111 7.27763 14.3974 6.84892 14.5929 6.3771C14.7883 5.90528 14.8889 5.39959 14.8889 4.88889C14.8889 4.37819 14.7883 3.8725 14.5929 3.40068C14.3974 2.92885 14.111 2.50015 13.7499 2.13903C13.3887 1.77791 12.96 1.49146 12.4882 1.29602C12.0164 1.10059 11.5107 1 11 1C9.9686 1 8.97945 1.40972 8.25014 2.13903C7.52083 2.86834 7.11111 3.85749 7.11111 4.88889C7.11111 5.92029 7.52083 6.90944 8.25014 7.63875C8.97945 8.36806 9.9686 8.77778 11 8.77778ZM1 20.3333V21H21V20.3333C21 17.8444 21 16.6 20.5156 15.6489C20.0895 14.8127 19.4096 14.1328 18.5733 13.7067C17.6222 13.2222 16.3778 13.2222 13.8889 13.2222H8.11111C5.62222 13.2222 4.37778 13.2222 3.42667 13.7067C2.59043 14.1328 1.91054 14.8127 1.48444 15.6489C1 16.6 1 17.8444 1 20.3333Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Data Pribadi</h3>
+    <p class="form-instruction">Informasi personal dan kontak</p>
+    
+    <p class="mockup-notice">
+        <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.2864 11.8102C28.2212 11.6611 28.13 11.5248 28.0171 11.4077L19.775 3.16555C19.6579 3.05268 19.5216 2.96151 19.3725 2.89631C19.3313 2.87708 19.2874 2.86609 19.2434 2.85098C19.1284 2.81201 19.0088 2.78845 18.8876 2.78092C18.8588 2.77817 18.8327 2.76306 18.8038 2.76306H9.18804C7.67287 2.76306 6.44067 3.99526 6.44067 5.51043V27.4894C6.44067 29.0046 7.67287 30.2368 9.18804 30.2368H25.6723C27.1874 30.2368 28.4196 29.0046 28.4196 27.4894V12.3789C28.4196 12.35 28.4045 12.3239 28.4018 12.2937C28.3942 12.1725 28.3707 12.0529 28.3317 11.9379C28.3189 11.8939 28.3038 11.8514 28.2864 11.8102ZM23.7299 11.0052H20.1775V7.45282L23.7299 11.0052ZM9.18804 27.4894V5.51043H17.4302V12.3789C17.4302 12.7432 17.5749 13.0926 17.8325 13.3502C18.0901 13.6078 18.4395 13.7525 18.8038 13.7525H25.6723L25.675 27.4894H9.18804Z" fill="#514D4D"/>
+<path d="M11.9355 16.5H22.925V19.2474H11.9355V16.5ZM11.9355 21.9947H22.925V24.7421H11.9355V21.9947ZM11.9355 11.0052H14.6829V13.7526H11.9355V11.0052Z" fill="#514D4D"/>
+</svg>Formulir data pribadi akan ditampilkan di sini. Ini adalah versi mock untuk demo
+    </p>                    
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="nama_lengkap">Nama Lengkap</label>
+                <input type="text" id="nama_lengkap" placeholder="Masukkan nama lengkap">
+            </div>
+            <div class="form-group-item">
+                <label for="nik">NIK</label>
+                <input type="text" id="nik" placeholder="Nomor Induk Kependudukan">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="text" id="tempat_lahir" placeholder="Kota Kelahiran">
+            </div>
+            <div class="form-group-item">
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="text" id="tanggal_lahir" placeholder="mm/dd/yy">
+            </div>
+        </div>
+        <div class="form-row" style="margin-bottom: 10px;">
+            <div class="form-group-item" style="padding-top: 5px; padding-bottom: 50px;"> 
+                <label>Jenis Kelamin</label>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <div style="flex: 1;">
+                        <input type="radio" id="Laki" name="gender" style="display: none;" checked>
+                        <label for="Laki" class="laki-laki">
+                            Laki-laki
+                        </label>
+                    </div>
+                    <div style="flex: 1;">
+                        <input type="radio" id="Perempuan" name="gender" style="display: none;">
+                        <label for="Perempuan" class="perempuan">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group-item" style="padding-top: 5px; padding-bottom: 5px;">
+                <label for="agama">Agama</label>
+                <input type="text" id="agama" placeholder="Masukan Agama">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="hp">No. HP</label>
+                <input type="tel" id="hp" placeholder="Masukan nomor HP">
+            </div>
+            <div class="form-group-item">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email">
+            </div>
+        </div>
+        
+        <div class="form-row" style="margin-bottom: 0;">
+            <div class="form-group-item" style="width: 504;"> 
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" rows="3" placeholder="Masukkan alamat lengkap" style="width: 555px; height: 115px; padding: 10px 15px; border: 1px solid #ced4da; border-radius: 5px; font-size: 1em;"></textarea>
+            </div>
+            <div class="form-group-item" style="padding-bottom: 110px;">
+                <label for="provinsi">Provinsi</label>
+                <input type="text" id="provinsi" placeholder="Pilih Provinsi">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="kota">Kabupaten/Kota</label>
+                <input type="text" id="kota" placeholder="Pilih Kabupaten/Kota">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="kecamatan">Kecamatan</label>
+                <input type="text" id="kecamatan" placeholder="Pilih Kecamatan">
+            </div>
+            <div class="form-group-item">
+                <label for="kelurahan">Kelurahan/Desa</label>
+                <input type="text" id="kelurahan" placeholder="Pilih Kelurahan/Desa">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group-item">
+                <label for="kodepos">Kode Pos</label>
+                <input type="text" id="kodepos" placeholder="Kode Pos">
+            </div>
+            <div class="form-group-item"></div>
+        </div>
+    
+    <div class="form-navigation">
+        <button class="btn-prev"><i class="icon-chevron-left">❮</i> Sebelumnya</button>
+        <div class="btn-group-right">
+            <button class="btn-form btn-form-secondary">Simpan Draft</button>
+            <button class="btn-form btn-form-primary" onclick="location.href='navigator.php?menu=dataakademik';">
+                Selanjutnya</button>
+        </div>
+    </div>
+    
+</div>

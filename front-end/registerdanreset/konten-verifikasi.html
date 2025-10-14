@@ -1,0 +1,18 @@
+<div class="verification-container">
+    <div class="verification-card">
+        <h2 class="form-title">Verifikasi Akun</h2>
+        <p class="form-subtitle small-text">
+            Kami telah mengirim kode verifikasi ke email Anda. Masukkan kode verifikasi 
+            untuk melanjutkan proses reset password
+        </p>
+
+        <form action="navigator.php?menu=newpassword">
+            <div class="form-group verification-input">
+                <label for="verification-code">Kode verifikasi</label>
+                <input type="text" id="verification-code" name="code" placeholder="Masukkan kode verifikasi" required>
+            </div>
+            
+            <button type="submit" class="btn-next">Selanjutnya</button>
+        </form>
+    </div>
+</div>
