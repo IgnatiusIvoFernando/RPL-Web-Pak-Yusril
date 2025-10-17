@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Pengumuman - Admin</title>
+  <link rel="stylesheet" href="tambah_pengumuman.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="admin-info">
+        <p>Welcome Admin,</p>
+        <h3>Sarah Elexandare</h3>
+      </div>
+
+      <!-- Menu dipindah ke bawah admin-info -->
+      <nav class="menu">
+        <ul>
+          <li><i class="fa fa-home"></i> Dashboard</li>
+          <li><i class="fa fa-users"></i> Data Mahasiswa</li>
+          <li class="active"><i class="fa fa-bullhorn"></i> Pengumuman</li>
+          <li><i class="fa fa-sign-out-alt"></i> Log Out</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="header">
+        <h1>Pengumuman</h1>
+      </div>
+
+      <div class="form-container">
+        <div class="form-header">
+          <i class="fa fa-arrow-left"></i>
+          <span>Tambah Pengumuman</span>
+        </div>
+
+        <form>
+          <label for="judul">Judul</label>
+          <input type="text" id="judul" placeholder="Pendaftaran Beasiswa">
+
+          <label for="isi">Isi Pengumuman</label>
+          <textarea id="isi" rows="5" placeholder="Tulis isi pengumuman..."></textarea>
+
+          <label for="file">Upload File/Gambar <span>(Jika Ada)</span></label>
+          <div class="file-upload">
+            <input type="file" id="file" hidden>
+            <div class="file-display">
+              <div class="file-name">Pamflet Pendaftaran.JPG</div>
+            </div>
+          </div>
+
+          <button type="submit" class="publish-btn">Publish</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
