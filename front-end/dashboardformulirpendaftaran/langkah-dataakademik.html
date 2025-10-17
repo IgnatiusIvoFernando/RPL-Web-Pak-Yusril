@@ -1,77 +1,66 @@
+<div class="content-card">    
+    <h3>
+    <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; color: var(--color-primary);">
+        <path d="M1 8L16.4449 1L31.8899 8L16.4449 15L1 8Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M31.8903 8.09167V15.7775M8.02124 11.6875V22.0558C8.02124 22.0558 11.5552 26 16.4454 26C21.3363 26 24.8702 22.0558 24.8702 22.0558V11.6875" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+        Data Akademik
+    </h3>
+    <p class="form-instruction">Informasi pendidikan dan jurusan</p>
+    
+    <div class="form-row">
+        <div class="form-group-item">
+            <label for="asalSekolah">Asal Sekolah</label>
+            <input type="text" id="asalSekolah">
+        </div>
+        <div class="form-group-item">
+            <label for="nilaiRataRata">Nilai Rata-Rata</label>
+            <input type="text" id="nilaiRataRata">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group-item">
+            <label for="tahunLulus">Tahun Lulus</label>
+            <input type="date" id="tahunLulus">
+        </div>
+        <div class="form-group-item">
+            <label for="jurusanKuliah">Jurusan Yang Dipilih</label>
+            <select id="jurusanKuliah" required name="jurusanKuliah">
+                <option value="" selected disabled></option>
+                <option value="TeknikElektro">Teknik Elektro</option>
+                <option value="TeknikSipil">Teknik Sipil</option>
+                <option value="Akuntansi">Akuntansi</option>
 
-            <div class="form-wrapper">
-                
-                <div class="content-card">
-                    
-                    <h3>
-<svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; color: var(--color-primary);">
-<path d="M1 8L16.4449 1L31.8899 8L16.4449 15L1 8Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
-<path d="M31.8903 8.09167V15.7775M8.02124 11.6875V22.0558C8.02124 22.0558 11.5552 26 16.4454 26C21.3363 26 24.8702 22.0558 24.8702 22.0558V11.6875" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group-item">
+            <label for="alamatSekolah">Alamat Sekolah</label>
+            <input type="text" id="alamatSekolah">
+        </div>
+        <div class="form-group-item">
+            <label for="prodiKuliah">Prodi Yang Dipilih</label>
+            <select id="prodiKuliah" required name="prodiKuliah">
+                <option value="" selected disabled></option>
+                <option value="D3Listrik">D3 - Teknik Listrik</option>
+                <option value="D3Informatika">D3 - Teknik Informatika</option>
+                <option value="D3TRSE">D3 - Teknik Rekayasa Sistem Elektronika</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="form-navigation">
+        <button onclick="location.href='navigator.php?menu=datapribadi';" class="btn-prev"><i class="icon-chevron-left">❮</i> Sebelumnya</button>
+        <div class="btn-group-right">
+            <button type="button" class="btn-form btn-form-secondary">
+                <i class="far fa-file-alt"></i> Simpan Draft
+            </button>
+            
+            <button type="submit" onclick="location.href='navigator.php?menu=dataorangtua';" class="btn-form btn-form-primary">
+                Selanjutnya
+            </button>
+        </div>
+    </div>
 
-
-                        Data Akademik
-                    </h3>
-                    <p class="form-instruction">Informasi pendidikan dan jurusan</p>
-
-                    <div class="mockup-notice">
-                        Formulir akademik akan ditampilkan disini, ini adalah versi mock untuk demo
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group-item">
-                            <label for="asalSekolah">Asal Sekolah</label>
-                            <input type="text" id="asalSekolah">
-                        </div>
-                        <div class="form-group-item">
-                            <label for="nilaiRataRata">Nilai Rata-Rata</label>
-                            <input type="text" id="nilaiRataRata">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group-item">
-                            <label for="tahunLulus">Tahun Lulus</label>
-                            <input type="date" id="tahunLulus">
-                        </div>
-                        <div class="form-group-item">
-                            <label for="jurusanKuliah">Jurusan Yang Dipilih</label>
-                            <select id="jurusanKuliah" required name="jurusanKuliah">
-                                <option value="" selected disabled></option>
-                                <option value="TeknikElektro">Teknik Elektro</option>
-                                <option value="TeknikSipil">Teknik Sipil</option>
-                                <option value="Akuntansi">Akuntansi</option>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group-item">
-                            <label for="alamatSekolah">Alamat Sekolah</label>
-                            <input type="text" id="alamatSekolah">
-                        </div>
-                        <div class="form-group-item">
-                            <label for="prodiKuliah">Prodi Yang Dipilih</label>
-                            <select id="prodiKuliah" required name="prodiKuliah">
-                                <option value="" selected disabled></option>
-                                <option value="D3Listrik">D3 - Teknik Listrik</option>
-                                <option value="D3Informatika">D3 - Teknik Informatika</option>
-                                <option value="D3TRSE">D3 - Teknik Rekayasa Sistem Elektronika</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-navigation">
-                        <button onclick="location.href='navigator.php?menu=datapribadi';" class="btn-prev"><i class="icon-chevron-left">❮</i> Sebelumnya</button>
-                        <div class="btn-group-right">
-                            <button type="button" class="btn-form btn-form-secondary">
-                                <i class="far fa-file-alt"></i> Simpan Draft
-                            </button>
-                            
-                            <button type="submit" onclick="location.href='navigator.php?menu=dataorangtua';" class="btn-form btn-form-primary">
-                                Selanjutnya
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+</div>
