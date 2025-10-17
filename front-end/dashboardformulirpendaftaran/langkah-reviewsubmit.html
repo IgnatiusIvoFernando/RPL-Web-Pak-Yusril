@@ -1,261 +1,266 @@
-<div class="form-wrapper">
-    <div class="content-card">
+<div class="content-card">
+     <h3>
+        <svg width="24" height="23" viewBox="0 0 24 23" style="margin-right: 10px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.958333C0 0.704167 0.105357 0.460412 0.292893 0.28069C0.48043 0.100967 0.734784 0 1 0H23C23.2652 0 23.5196 0.100967 23.7071 0.28069C23.8946 0.460412 24 0.704167 24 0.958333V9.58333H22V1.91667H2V21.0833H6.01V23H1C0.734784 23 0.48043 22.899 0.292893 22.7193C0.105357 22.5396 0 22.2958 0 22.0417V0.958333ZM23.988 14.053L14.948 22.7144C14.7606 22.8935 14.5067 22.994 14.242 22.994C13.9773 22.994 13.7234 22.8935 13.536 22.7144L8.516 17.9036L9.928 16.5466L14.242 20.6808L22.574 12.696L23.988 14.053Z" fill="black"/>
+        </svg>
+        Review & Submit
+    </h3>
+    <p class="form-instruction">Periksa dan kirim data</p>
+  <div class="review-section collapsed">
+    <div class="review-header collapsible">
+      <div>
+        <h4>Data Pribadi</h4>
+        <p>Nama, NIK dan informasi lainnya</p>
+      </div>
+      <span class="collapse-icon">▾</span>
+    </div>
+    <div class="review-body pribadi-grid">
+        <div class="pribadi-col">
+        <table class="pribadi-table">
+            <tr>
+            <td><label>Nama Lengkap</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>NIK</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Tempat, tanggal lahir</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Jenis Kelamin</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Agama</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>No. HP</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+        </table>
+        </div>
+        <div class="pribadi-col right">
+        <table class="pribadi-table">
+            <tr>
+            <td><label>Email</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Alamat</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Provinsi</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Kota</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Kode Pos</label><p class="pribadi-value placeholder"></p></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="review-section collapsed">
+    <div class="review-header collapsible">
+      <div>
+        <h4>Data Akademik</h4>
+        <p>Fakultas, prodi, dan jalur masuk</p>
+      </div>
+      <span class="collapse-icon">▾</span>
+    </div>
+    <div class="review-body akademik-box">
+        <table class="akademik-table">
+        <tr>
+            <td><label>Asal Sekolah</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        <tr>
+            <td><label>Alamat Sekolah</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        <tr>
+            <td><label>Tahun Lulus</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        <tr>
+            <td><label>Nilai rata-rata</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        <tr>
+            <td><label>Fakultas yang dipilih</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        <tr>
+            <td><label>Program Studi</label><p class="akademik-value placeholder"></p></td>
+        </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="review-section collapsed">
+    <div class="review-header collapsible">
+      <div>
+        <h4>Data Orang Tua</h4>
+        <p>Informasi orang tua dan wali</p>
+      </div>
+      <span class="collapse-icon">▾</span>
+    </div>
+    <div class="review-body orangtua-grid">
+        <div class="orangtua-card">
+        <h5>Data Ayah</h5>
+        <table class="orangtua-table">
+            <tr>
+            <td><label>Nama Lengkap</label><p class="orangtua-value placeholder"></p></td>
+            <td><label>No. HP</label><p class="orangtua-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Pekerjaan</label><p class="orangtua-value placeholder"></p></td>
+            <td><label>Penghasilan</label><p class="orangtua-value placeholder"></p></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="orangtua-card">
+        <h5>Data Ibu</h5>
+        <table class="orangtua-table">
+            <tr>
+            <td><label>Nama Lengkap</label><p class="orangtua-value placeholder"></p></td>
+            <td><label>No. HP</label><p class="orangtua-value placeholder"></p></td>
+            </tr>
+            <tr>
+            <td><label>Pekerjaan</label><p class="orangtua-value placeholder"></p></td>
+            <td><label>Penghasilan</label><p class="orangtua-value placeholder"></p></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+  </div>
+
+    <div class="review-section collapsed">
+    <div class="review-header collapsible">
+        <div>
+        <h4>Dokumen</h4>
+        <p>4 dokumen telah diupload</p>
+        </div>
+        <span class="collapse-icon">▾</span>
+    </div>
+
+    <div class="review-body">
+        <div class="doc-grid">
         
-      <div class="review-section collapsed">
-        <div class="review-header collapsible">
-          <div>
-            <h4>Data Pribadi</h4>
-            <p>Nama, NIK dan informasi lainnya</p>
-          </div>
-          <span class="collapse-icon">▾</span>
-        </div>
-        <div class="review-body pribadi-grid">
-            <div class="pribadi-col">
-            <table class="pribadi-table">
-                <tr>
-                <td><label>Nama Lengkap</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>NIK</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Tempat, tanggal lahir</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Jenis Kelamin</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Agama</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>No. HP</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-            </table>
+        <div class="doc-card">
+            <h5>Ijazah/SKL</h5>
+            <div class="doc-box">
+            <div class="doc-info">
+                <p class="doc-filename">Ijazah_SMA.pdf</p>
+                <p class="doc-meta">Upload: 16/1/2025</p>
             </div>
-            <div class="pribadi-col right">
-            <table class="pribadi-table">
-                <tr>
-                <td><label>Email</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Alamat</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Provinsi</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Kota</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Kode Pos</label><p class="pribadi-value placeholder"></p></td>
-                </tr>
-            </table>
-            </div>
-        </div>
-      </div>
-
-
-      <div class="review-section collapsed">
-        <div class="review-header collapsible">
-          <div>
-            <h4>Data Akademik</h4>
-            <p>Fakultas, prodi, dan jalur masuk</p>
-          </div>
-          <span class="collapse-icon">▾</span>
-        </div>
-        <div class="review-body akademik-box">
-            <table class="akademik-table">
-            <tr>
-                <td><label>Asal Sekolah</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            <tr>
-                <td><label>Alamat Sekolah</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            <tr>
-                <td><label>Tahun Lulus</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            <tr>
-                <td><label>Nilai rata-rata</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            <tr>
-                <td><label>Fakultas yang dipilih</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            <tr>
-                <td><label>Program Studi</label><p class="akademik-value placeholder"></p></td>
-            </tr>
-            </table>
-        </div>
-      </div>
-
-      <div class="review-section collapsed">
-        <div class="review-header collapsible">
-          <div>
-            <h4>Data Orang Tua</h4>
-            <p>Informasi orang tua dan wali</p>
-          </div>
-          <span class="collapse-icon">▾</span>
-        </div>
-        <div class="review-body orangtua-grid">
-            <div class="orangtua-card">
-            <h5>Data Ayah</h5>
-            <table class="orangtua-table">
-                <tr>
-                <td><label>Nama Lengkap</label><p class="orangtua-value placeholder"></p></td>
-                <td><label>No. HP</label><p class="orangtua-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Pekerjaan</label><p class="orangtua-value placeholder"></p></td>
-                <td><label>Penghasilan</label><p class="orangtua-value placeholder"></p></td>
-                </tr>
-            </table>
-            </div>
-
-            <div class="orangtua-card">
-            <h5>Data Ibu</h5>
-            <table class="orangtua-table">
-                <tr>
-                <td><label>Nama Lengkap</label><p class="orangtua-value placeholder"></p></td>
-                <td><label>No. HP</label><p class="orangtua-value placeholder"></p></td>
-                </tr>
-                <tr>
-                <td><label>Pekerjaan</label><p class="orangtua-value placeholder"></p></td>
-                <td><label>Penghasilan</label><p class="orangtua-value placeholder"></p></td>
-                </tr>
-            </table>
-            </div>
-        </div>
-      </div>
-
-        <div class="review-section collapsed">
-        <div class="review-header collapsible">
-            <div>
-            <h4>Dokumen</h4>
-            <p>4 dokumen telah diupload</p>
-            </div>
-            <span class="collapse-icon">▾</span>
-        </div>
-
-        <div class="review-body">
-            <div class="doc-grid">
-            
-            <div class="doc-card">
-                <h5>Ijazah/SKL</h5>
-                <div class="doc-box">
-                <div class="doc-info">
-                    <p class="doc-filename">Ijazah_SMA.pdf</p>
-                    <p class="doc-meta">Upload: 16/1/2025</p>
-                </div>
-                <div class="doc-actions">
-                        <button class="icon-btn" title="Lihat Dokumen">
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
-                            </svg>
-                        </button>
-                        <button class="icon-btn" title="Edit Dokumen">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="doc-card">
-                <h5>Akta Kelahiran</h5>
-                <div class="doc-box">
-                <div class="doc-info">
-                    <p class="doc-filename">akta_kelahiran.pdf</p>
-                    <p class="doc-meta">Upload: 16/1/2025</p>
-                </div>
-                <div class="doc-actions">
-                        <button class="icon-btn" title="Lihat Dokumen">
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
-                            </svg>
-                        </button>
-                        <button class="icon-btn" title="Edit Dokumen">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="doc-card">
-                <h5>Kartu Keluarga</h5>
-                <div class="doc-box">
-                <div class="doc-info">
-                    <p class="doc-filename">kartu_keluarga.pdf</p>
-                    <p class="doc-meta">Upload: 16/1/2025</p>
-                </div>
-                    <div class="doc-actions">
-                        <button class="icon-btn" title="Lihat Dokumen">
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
-                            </svg>
-                        </button>
-                        <button class="icon-btn" title="Edit Dokumen">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="doc-card">
-                <h5>Pas Foto 3x4</h5>
-                <div class="doc-box">
-                <div class="doc-info">
-                    <p class="doc-filename">pas_foto.png</p>
-                    <p class="doc-meta">Upload: 16/1/2025</p>
-                </div>
-                <div class="doc-actions">
-                        <button class="icon-btn" title="Lihat Dokumen">
+            <div class="doc-actions">
+                    <button class="icon-btn" title="Lihat Dokumen">
                         <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
                         </svg>
-                        </button>
-                        <button class="icon-btn" title="Edit Dokumen">
+                    </button>
+                    <button class="icon-btn" title="Edit Dokumen">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        </button>
-                    </div>
+                    </button>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
-        <div class="form-navigation">
-                <button onclick="location.href='navigator.php?menu=dokumen';" class="btn-prev">
-                <i class="icon-chevron-left">❮</i> Sebelumnya
-                </button>
-                <div class="btn-group-right">
-                <button type="button" class="btn-form btn-form-secondary">
-                    <i class="far fa-file-alt"></i> Simpan Draft
-                </button>
-                <button type="submit" class="btn-form btn-form-primary btn-finish">
-                    Selesai
-                </button>
-                </div>
-            </div>
-  <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    const headers = document.querySelectorAll(".review-header");
 
-    headers.forEach(header => {
-        header.addEventListener("click", () => {
-        const section = header.parentElement;
-        section.classList.toggle("collapsed");
-        });
+        <div class="doc-card">
+            <h5>Akta Kelahiran</h5>
+            <div class="doc-box">
+            <div class="doc-info">
+                <p class="doc-filename">akta_kelahiran.pdf</p>
+                <p class="doc-meta">Upload: 16/1/2025</p>
+            </div>
+            <div class="doc-actions">
+                    <button class="icon-btn" title="Lihat Dokumen">
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="Edit Dokumen">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="doc-card">
+            <h5>Kartu Keluarga</h5>
+            <div class="doc-box">
+            <div class="doc-info">
+                <p class="doc-filename">kartu_keluarga.pdf</p>
+                <p class="doc-meta">Upload: 16/1/2025</p>
+            </div>
+                <div class="doc-actions">
+                    <button class="icon-btn" title="Lihat Dokumen">
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="Edit Dokumen">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="doc-card">
+            <h5>Pas Foto 3x4</h5>
+            <div class="doc-box">
+            <div class="doc-info">
+                <p class="doc-filename">pas_foto.png</p>
+                <p class="doc-meta">Upload: 16/1/2025</p>
+            </div>
+            <div class="doc-actions">
+                    <button class="icon-btn" title="Lihat Dokumen">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z" fill="#4A4747"/>
+                    </svg>
+                    </button>
+                    <button class="icon-btn" title="Edit Dokumen">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.125 5.125H3.25C2.78587 5.125 2.34075 5.30937 2.01256 5.63756C1.68437 5.96575 1.5 6.41087 1.5 6.875V14.75C1.5 15.2141 1.68437 15.6592 2.01256 15.9874C2.34075 16.3156 2.78587 16.5 3.25 16.5H11.125C11.5891 16.5 12.0342 16.3156 12.3624 15.9874C12.6906 15.6592 12.875 15.2141 12.875 14.75V13.875" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3.37509L14.625 6.00009M15.8369 4.76197C16.1815 4.41735 16.3751 3.94995 16.3751 3.46259C16.3751 2.97523 16.1815 2.50783 15.8369 2.16322C15.4923 1.8186 15.0249 1.625 14.5375 1.625C14.0501 1.625 13.5827 1.8186 13.2381 2.16322L5.875 9.50009V12.1251H8.5L15.8369 4.76197Z" stroke="#454648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="form-navigation">
+            <button onclick="location.href='navigator.php?menu=dokumen';" class="btn-prev">
+            <i class="icon-chevron-left">❮</i> Sebelumnya
+            </button>
+            <div class="btn-group-right">
+            <button type="button" class="btn-form btn-form-secondary">
+                <i class="far fa-file-alt"></i> Simpan Draft
+            </button>
+            <button type="submit" class="btn-form btn-form-primary btn-finish">
+                Selesai
+            </button>
+            </div>
+        </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+const headers = document.querySelectorAll(".review-header");
+
+headers.forEach(header => {
+    header.addEventListener("click", () => {
+    const section = header.parentElement;
+    section.classList.toggle("collapsed");
     });
-    });
+});
+});
 
   </script>
