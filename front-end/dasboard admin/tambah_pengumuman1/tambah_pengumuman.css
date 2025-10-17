@@ -1,0 +1,179 @@
+/* ===== Reset dasar ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #4b4b4b;
+}
+
+/* ===== Container utama ===== */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 250px;
+  background-color: #bfc8cf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-info {
+  margin-bottom: 30px;
+}
+
+.admin-info p {
+  color: #2b3643;
+  font-size: 14px;
+  margin: 0;
+}
+
+.admin-info h3 {
+  color: #1e3a55;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+/* ===== Menu Navigasi ===== */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #1e3a55;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu li i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.menu li:hover,
+.menu li.active {
+  background-color: #dce4eb;
+  font-weight: 600;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  flex: 1;
+  background-color: #2f475e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header biru di atas */
+.header {
+  background-color: #1e3a55;
+  padding: 18px 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* ===== Form Section ===== */
+.form-container {
+  background-color: #354b63;
+  border-radius: 8px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  color: #d6e06c;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.form-header i {
+  margin-right: 8px;
+}
+
+/* Input & Label */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  background-color: #aab3bb;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 20px;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+form textarea {
+  resize: none;
+}
+
+/* File Upload */
+label span {
+  font-weight: 400;
+  color: #d0d0d0;
+}
+
+.file-upload {
+  margin-bottom: 25px;
+}
+
+.file-display {
+  background-color: #2f4768;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.file-name {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Tombol Publish */
+.publish-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #807d74;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.publish-btn:hover {
+  background-color: #6f6d64;
+}
