@@ -155,9 +155,9 @@ body {
 /* C. Card Header Formulir & Step Counter */
 /* ---------------------------------- */
 .form-header-card {
-    background-color: var(--color-content-bg);
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
     position: relative;
@@ -201,6 +201,10 @@ body {
     flex-wrap: wrap; /* Izinkan item melipat ke bawah di layar kecil */
 }
 
+/* =========================== */
+/* Progress Section (Logo Item) */
+/* =========================== */
+
 .logo-item {
     display: flex;
     flex-direction: column;
@@ -209,31 +213,31 @@ body {
     flex: 1; /* Agar setiap item mengambil ruang yang sama */
     min-width: 150px; /* Lebar minimum untuk item */
     padding: 10px; /* Padding di dalam item */
+    color: #b3b4b9;
+    transition: all 0.3s ease;
 }
 
 .logo-icon-wrapper {
-    width: 60px; /* Ukuran lingkaran ikon */
+    width: 60px; 
     height: 60px;
     border-radius: 50%;
-    background-color: #f1f1f1; /* Latar belakang abu-abu terang */
-    border: 1px solid #e0e0e0; /* Border abu-abu */
+    background-color: #f1f1f1;
+    border: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     transition: all 0.3s ease;
-    
-    /* Gaya untuk ikon di dalamnya (jika SVG/Font Icon) */
-    font-size: 1.8em; /* Ukuran ikon di dalamnya */
-    color: #888; /* Warna ikon default */
 
-    /* Untuk SVG icon */
-    & svg {
-        width: 28px;
-        height: 28px;
-        stroke: #888;
-        transition: stroke 0.3s ease;
-    }
+    font-size: 1.8em;
+    color: #888;
+}
+
+.logo-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+    stroke: #888;
+    transition: stroke 0.3s ease;
 }
 
 .logo-title {
@@ -246,15 +250,62 @@ body {
 .logo-subtitle {
     font-size: 0.75em;
     color: #6c757d;
-    line-height: 1.2;
 }
+
+
+.logo-item.active .logo-icon-wrapper {
+    background-color: #e8f0ff;
+    border-color: #4a90e2;
+}
+
+.logo-item.active svg {
+    stroke: #4a90e2;
+    fill: none;
+}
+
+.logo-item.active .logo-title {
+    color: #000;
+}
+
+.logo-item.active .logo-subtitle {
+    color: #000;
+}
+
+.progress-bar-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #000;
+  height: 10px;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progress-percent {
+  font-weight: 600;
+  color: #333;
+}
+
 /* ---------------------------------- */
 /* E. Form Card Konten Spesifik (Gaya Umum) */
 /* ---------------------------------- */
 .content-card {
-    background-color: var(--color-content-bg);
+    background-color: #fff;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
 }
@@ -442,41 +493,6 @@ body {
 
 .btn-form-modal:hover {
   background-color: #000;
-}
-.laki-laki {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 244px;
-    height: 45px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 17px;
-    color: #B3B4B9;
-    padding: 12px 15px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-
-}
-
-.perempuan {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 244px;
-    height: 45px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 17px;
-    color: #B3B4B9;
-    padding: 12px 15px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-
 }
 /* ---------------------------------- */
 /* F. Navigasi Bawah Form */
@@ -797,4 +813,363 @@ h1 { margin-top: 0; font-size: 1.4rem; font-weight: 700; }
 .upload-area p {
   color: #555;
   margin: 5px 0;
+}
+
+.icon-review {
+  margin-right: 10px;
+  color: var(--color-primary);
+}
+
+.icon-check {
+  margin-right: 10px;
+  color: var(--green);
+}
+
+/* Bagian Review */
+/* Pemberitahuan hijau */
+.mockup-notice.success {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f3fff0;
+  border: 1px solid #d3f5c8;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #2c662d;
+  margin-bottom: 25px;
+}
+
+.review-section {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  background: #f9f9f9;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.review-header h4 {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 3px;
+}
+
+.review-header p {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.collapse-icon {
+  font-size: 1.2em;
+  color: #6c757d;
+  transition: transform 0.3s ease;
+}
+
+.review-section.collapsed .collapse-icon {
+  transform: rotate(-90deg);
+}
+
+.review-body {
+  padding: 20px;
+  display: block;
+}
+
+.review-section.collapsed .review-body {
+  display: none;
+}
+
+.checkmark {
+  color: var(--green);
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+/* Body layout */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.review-card {
+  border: 1px solid var(--color-border);
+  background-color: #fafafa;
+  border-radius: 6px;
+  padding: 15px;
+}
+/* === Data Pribadi Section === */
+
+.pribadi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pribadi-col {
+  padding: 15px 25px;
+}
+
+.pribadi-col.right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.pribadi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pribadi-table td {
+  padding: 6px 0;
+}
+
+.pribadi-table label {
+  font-size: 0.85em;
+  color: #999;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.pribadi-value {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 14px;
+}
+
+/* Placeholder kosong */
+.placeholder {
+  width: 70%;
+  height: 12px;
+  background: #f1f3f4;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .pribadi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pribadi-col.right {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+.akademik-box {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 15px 25px;
+}
+
+.akademik-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.akademik-table td {
+  padding: 6px 0;
+  vertical-align: top;
+}
+
+.akademik-table label {
+  font-size: 0.85em;
+  color: #999;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.akademik-value {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 14px;
+}
+
+.placeholder {
+  width: 60%;
+  height: 12px;
+  background: #f1f3f4;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.data-placeholder {
+  display: inline-block;
+  width: 60%;
+  height: 12px;
+  background-color: #f1f3f4;
+  border-radius: 3px;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doc-card h5 {
+  font-weight: 600;
+  font-size: 1em;
+  color: var(--color-black);
+  margin-bottom: 2px;
+}
+
+.doc-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.doc-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-filename {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 2px;
+}
+
+.doc-meta {
+  font-size: 0.8em;
+  color: #b3b4b9;
+}
+
+.doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.icon-btn:hover {
+  color: var(--color-primary);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .doc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* === Data Orang Tua Section === */
+
+.orangtua-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.orangtua-card {
+  border-right: 1px solid var(--color-border);
+  padding: 15px 20px;
+}
+
+.orangtua-card:last-child {
+  border-right: none;
+}
+
+.orangtua-card h5 {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.orangtua-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orangtua-table td {
+  width: 50%;
+  vertical-align: top;
+  padding: 6px 4px;
+}
+
+.orangtua-table label {
+  font-size: 0.85em;
+  color: #999;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.orangtua-value {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .orangtua-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orangtua-card {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .orangtua-card:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Tombol selesai */
+.btn-finish {
+  background: #D8FCB9;
+  color: green;
+  font-weight: 600;
+}
+.btn-finish:hover {
+  background: hsl(96, 83%, 80%);
 }
